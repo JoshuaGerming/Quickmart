@@ -1,8 +1,11 @@
-const router = require('express').Router();
+// backend/routes/productRoutes.js
+const express = require('express');
+const router  = express.Router();
 const { getProducts, createProduct } = require('../controllers/productController');
 const { protect } = require('../middleware/authMiddleware');
 
-router.get('/', getProducts);
+// again, only valid strings here
+router.get('/',  getProducts);
 router.post('/', protect, createProduct);
 
 module.exports = router;
