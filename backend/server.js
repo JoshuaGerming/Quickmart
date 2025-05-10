@@ -22,7 +22,8 @@ app.use('/api/products', productRoutes);
 
 // 4) Serve React build
 app.use(express.static(path.join(__dirname, '../frontend/build')));
-app.get('*', (req, res) => {
+// RIGHT: prefix with a slash so path-to-regexp can compile it
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
