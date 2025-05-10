@@ -1,0 +1,33 @@
+/* Global CSS variables & base styles */
+
+:root {
+  /* Light mode colors */
+  --bg:         #f8f9fa;
+  --surface:    #ffffff;  /* default card/form background */
+  --text:       #343a40;
+  --muted:      #6c757d;
+  --primary:    #007bff;
+  --secondary:  #28a745;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md:  0 4px 8px rgba(0,0,0,0.1);
+  --shadow-lg:  0 8px 16px rgba(0,0,0,0.15);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg:         #121212;
+  --surface:    #2c2c2c;  /* cards/forms become this grey */
+  --text:       #e0e0e0;
+  --muted:      #aaaaaa;
+  --primary:    #bb86fc;
+  --secondary:  #03dac6;
+}
