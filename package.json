@@ -1,11 +1,11 @@
+
 {
     "name": "my-ecommerce-app",
     "version": "1.0.0",
     "private": true,
     "scripts": {
       "start": "node backend/server.js",
-      
-      "postinstall": "npm install --prefix frontend && node frontend/node_modules/react-scripts/scripts/build.js"
+      "postinstall": "cd frontend && npm install && node node_modules/react-scripts/scripts/build.js"
     },
     "engines": {
       "node": "18.x"
